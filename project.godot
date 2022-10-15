@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="GamejamF2022"
-run/main_scene="res://TitleScreen.tscn"
+run/main_scene="res://title_screen/TitleScreen.tscn"
 config/icon="res://icon.png"
 
 [display]
