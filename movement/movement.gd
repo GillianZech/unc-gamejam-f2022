@@ -21,8 +21,8 @@ func _unhandled_input(event):
 			move(dir)
 			_animated_sprite.play("walk")
 			
-		else:
-			 _animated_sprite.play("idle")
+		#elif _animated_sprite.is_playing("walk") == false:
+		#	 _animated_sprite.play("idle")
 		if event.is_action_pressed("ui_up"):
 			rotation = 4.71239
 		if event.is_action_pressed("ui_down"):
@@ -46,3 +46,8 @@ func move(dir):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+
+func _on_Player_animation_finished():
+	if _animated_sprite.animation == "walk":
+		_animated_sprite.animation = "idle"
