@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Protagonist Sprite Sheet.png-a67a9b5d70ba654d349f6a57857edea4.stex"
+path="res://.import/Protagonist Sprite Sheet down.png-aa4ca53ecc4883e956d01231f4a2f586.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Protagonist Sprite Sheet.png"
-dest_files=[ "res://.import/Protagonist Sprite Sheet.png-a67a9b5d70ba654d349f6a57857edea4.stex" ]
+source_file="res://Protagonist Sprite Sheet down.png"
+dest_files=[ "res://.import/Protagonist Sprite Sheet down.png-aa4ca53ecc4883e956d01231f4a2f586.stex" ]
 
 [params]
 

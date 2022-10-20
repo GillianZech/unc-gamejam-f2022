@@ -18,29 +18,39 @@ var inputs = {
 func _unhandled_input(event):
 	for dir in inputs.keys():
 		if event.is_action_pressed(dir):
-			move(dir)
-			_animated_sprite.play("walk")
-			
-		#elif _animated_sprite.is_playing("walk") == false:
-		#	 _animated_sprite.play("idle")
+			if $Tween.is_active() == false:
+				move(dir)
 		if event.is_action_pressed("ui_up"):
-			rotation = 4.71239
+			_animated_sprite.play("walk_up")
 		if event.is_action_pressed("ui_down"):
-			rotation = 1.5708
+			_animated_sprite.play("walk_down")
 		if event.is_action_pressed("ui_left"):
-			rotation = 3.14159
+			_animated_sprite.play("walk_left")
 		if event.is_action_pressed("ui_right"):
-			rotation = 0
+			_animated_sprite.play("walk_right")
 		
 
-func move(dir):
-	var vector_position = inputs[dir] * gridsize
-	ray.cast_to = vector_position
-	ray.force_raycast_update()
-	if !ray.is_colliding():
-		position += vector_position
 
+func move(dir):
+	var vector_pos = inputs[dir] * gridsize
+	ray.cast_to = vector_pos * 2
+	ray.force_raycast_update()
+	$Tween.interpolate_property(
+		$Player, #or whatever the name of your sprite is
+		"position",
+		$Player.position - vector_pos,
+		Vector2(0, 5),
+		.5,
+		Tween.TRANS_SINE,
+		Tween.EASE_IN_OUT
+	)
+	if !ray.is_colliding():
+		position += vector_pos
+		$Tween.start()
+		
 	
+
+		
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -49,5 +59,11 @@ func move(dir):
 
 
 func _on_Player_animation_finished():
-	if _animated_sprite.animation == "walk":
-		_animated_sprite.animation = "idle"
+	if _animated_sprite.animation == "walk_up":
+		_animated_sprite.animation = "idle_up"
+	if _animated_sprite.animation == "walk_right":
+		_animated_sprite.animation = "idle_right"
+	if _animated_sprite.animation == "walk_down":
+		_animated_sprite.animation = "idle_down"
+	if _animated_sprite.animation == "walk_left":
+		_animated_sprite.animation = "idle_left"

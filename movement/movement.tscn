@@ -1,8 +1,8 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=51 format=2]
 
 [ext_resource path="res://movement/movement.gd" type="Script" id=1]
-[ext_resource path="res://Zoo Walking.png" type="Texture" id=2]
-[ext_resource path="res://wall.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Protagonist Sprite Sheet left.png" type="Texture" id=2]
+[ext_resource path="res://Protagonist Sprite Sheet up.png" type="Texture" id=3]
 [ext_resource path="res://textures/avianarchy-floor-brick-3.png" type="Texture" id=4]
 [ext_resource path="res://textures/avianarchy-concrete-wall-3.png" type="Texture" id=5]
 [ext_resource path="res://textures/avianarchy-floor-brick-2.png" type="Texture" id=6]
@@ -10,6 +10,8 @@
 [ext_resource path="res://textures/avianarchy-floor-tile-1.png" type="Texture" id=8]
 [ext_resource path="res://textures/avianarchy-concrete-wall-1.png" type="Texture" id=9]
 [ext_resource path="res://textures/avianarchy-concrete-wall-2.png" type="Texture" id=10]
+[ext_resource path="res://Protagonist Sprite Sheet.png" type="Texture" id=11]
+[ext_resource path="res://Protagonist Sprite Sheet down.png" type="Texture" id=12]
 
 [sub_resource type="TileSet" id=20]
 0/name = "avianarchy-floor-tile-1.png 0"
@@ -164,70 +166,181 @@
 [sub_resource type="RectangleShape2D" id=15]
 extents = Vector2( 85.3333, 85.3333 )
 
-[sub_resource type="AtlasTexture" id=17]
-atlas = ExtResource( 2 )
-region = Rect2( 0, 0, 24, 24 )
+[sub_resource type="AtlasTexture" id=69]
+atlas = ExtResource( 12 )
+region = Rect2( 48, 144, 24, 24 )
 
-[sub_resource type="AtlasTexture" id=2]
+[sub_resource type="AtlasTexture" id=70]
 atlas = ExtResource( 2 )
-region = Rect2( 0, 0, 24, 24 )
+region = Rect2( 120, 48, 24, 24 )
 
-[sub_resource type="AtlasTexture" id=3]
-atlas = ExtResource( 2 )
-region = Rect2( 24, 0, 24, 24 )
+[sub_resource type="AtlasTexture" id=71]
+atlas = ExtResource( 11 )
+region = Rect2( 144, 48, 24, 24 )
 
-[sub_resource type="AtlasTexture" id=4]
-atlas = ExtResource( 2 )
+[sub_resource type="AtlasTexture" id=72]
+atlas = ExtResource( 3 )
+region = Rect2( 48, 120, 24, 24 )
+
+[sub_resource type="AtlasTexture" id=76]
+atlas = ExtResource( 12 )
 region = Rect2( 48, 0, 24, 24 )
 
-[sub_resource type="AtlasTexture" id=5]
-atlas = ExtResource( 2 )
-region = Rect2( 72, 0, 24, 24 )
+[sub_resource type="AtlasTexture" id=77]
+atlas = ExtResource( 12 )
+region = Rect2( 48, 24, 24, 24 )
 
-[sub_resource type="AtlasTexture" id=6]
-atlas = ExtResource( 2 )
-region = Rect2( 96, 0, 24, 24 )
+[sub_resource type="AtlasTexture" id=78]
+atlas = ExtResource( 12 )
+region = Rect2( 48, 48, 24, 24 )
 
-[sub_resource type="AtlasTexture" id=7]
-atlas = ExtResource( 2 )
-region = Rect2( 120, 0, 24, 24 )
+[sub_resource type="AtlasTexture" id=79]
+atlas = ExtResource( 12 )
+region = Rect2( 48, 72, 24, 24 )
 
-[sub_resource type="AtlasTexture" id=8]
-atlas = ExtResource( 2 )
-region = Rect2( 144, 0, 24, 24 )
+[sub_resource type="AtlasTexture" id=80]
+atlas = ExtResource( 12 )
+region = Rect2( 48, 96, 24, 24 )
 
-[sub_resource type="AtlasTexture" id=9]
-atlas = ExtResource( 2 )
-region = Rect2( 168, 0, 24, 24 )
+[sub_resource type="AtlasTexture" id=81]
+atlas = ExtResource( 12 )
+region = Rect2( 48, 120, 24, 24 )
 
-[sub_resource type="AtlasTexture" id=10]
-atlas = ExtResource( 2 )
-region = Rect2( 192, 0, 24, 24 )
+[sub_resource type="AtlasTexture" id=82]
+atlas = ExtResource( 12 )
+region = Rect2( 48, 144, 24, 24 )
 
-[sub_resource type="AtlasTexture" id=11]
+[sub_resource type="AtlasTexture" id=91]
 atlas = ExtResource( 2 )
-region = Rect2( 216, 0, 24, 24 )
+region = Rect2( 120, 48, 24, 24 )
 
-[sub_resource type="AtlasTexture" id=12]
+[sub_resource type="AtlasTexture" id=92]
 atlas = ExtResource( 2 )
-region = Rect2( 240, 0, 24, 24 )
+region = Rect2( 144, 48, 24, 24 )
 
-[sub_resource type="AtlasTexture" id=13]
+[sub_resource type="AtlasTexture" id=93]
 atlas = ExtResource( 2 )
-region = Rect2( 264, 0, 24, 24 )
+region = Rect2( 168, 48, 24, 24 )
+
+[sub_resource type="AtlasTexture" id=94]
+atlas = ExtResource( 2 )
+region = Rect2( 192, 48, 24, 24 )
+
+[sub_resource type="AtlasTexture" id=95]
+atlas = ExtResource( 2 )
+region = Rect2( 216, 48, 24, 24 )
+
+[sub_resource type="AtlasTexture" id=96]
+atlas = ExtResource( 2 )
+region = Rect2( 240, 48, 24, 24 )
+
+[sub_resource type="AtlasTexture" id=97]
+atlas = ExtResource( 2 )
+region = Rect2( 264, 48, 24, 24 )
+
+[sub_resource type="AtlasTexture" id=45]
+atlas = ExtResource( 11 )
+region = Rect2( 0, 48, 24, 24 )
+
+[sub_resource type="AtlasTexture" id=46]
+atlas = ExtResource( 11 )
+region = Rect2( 24, 48, 24, 24 )
+
+[sub_resource type="AtlasTexture" id=47]
+atlas = ExtResource( 11 )
+region = Rect2( 48, 48, 24, 24 )
+
+[sub_resource type="AtlasTexture" id=48]
+atlas = ExtResource( 11 )
+region = Rect2( 72, 48, 24, 24 )
+
+[sub_resource type="AtlasTexture" id=49]
+atlas = ExtResource( 11 )
+region = Rect2( 96, 48, 24, 24 )
+
+[sub_resource type="AtlasTexture" id=51]
+atlas = ExtResource( 11 )
+region = Rect2( 144, 48, 24, 24 )
+
+[sub_resource type="AtlasTexture" id=57]
+atlas = ExtResource( 3 )
+region = Rect2( 48, 264, 24, 24 )
+
+[sub_resource type="AtlasTexture" id=58]
+atlas = ExtResource( 3 )
+region = Rect2( 48, 0, 24, 24 )
+
+[sub_resource type="AtlasTexture" id=59]
+atlas = ExtResource( 3 )
+region = Rect2( 48, 24, 24, 24 )
+
+[sub_resource type="AtlasTexture" id=60]
+atlas = ExtResource( 3 )
+region = Rect2( 48, 48, 24, 24 )
+
+[sub_resource type="AtlasTexture" id=61]
+atlas = ExtResource( 3 )
+region = Rect2( 48, 72, 24, 24 )
+
+[sub_resource type="AtlasTexture" id=62]
+atlas = ExtResource( 3 )
+region = Rect2( 48, 96, 24, 24 )
+
+[sub_resource type="AtlasTexture" id=63]
+atlas = ExtResource( 3 )
+region = Rect2( 48, 120, 24, 24 )
 
 [sub_resource type="SpriteFrames" id=14]
 animations = [ {
-"frames": [ SubResource( 17 ) ],
-"loop": false,
-"name": "idle",
+"frames": [ SubResource( 69 ) ],
+"loop": true,
+"name": "idle_down",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ) ],
+"frames": [ SubResource( 70 ) ],
+"loop": true,
+"name": "idle_left",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 71 ) ],
+"loop": true,
+"name": "idle_right",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 72 ) ],
+"loop": true,
+"name": "idle_up",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 76 ), SubResource( 77 ), SubResource( 78 ), SubResource( 79 ), SubResource( 80 ), SubResource( 81 ), SubResource( 82 ) ],
 "loop": false,
-"name": "walk",
+"name": "walk_down",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 91 ), SubResource( 92 ), SubResource( 93 ), SubResource( 94 ), SubResource( 95 ), SubResource( 96 ), SubResource( 97 ) ],
+"loop": false,
+"name": "walk_left",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 45 ), SubResource( 46 ), SubResource( 47 ), SubResource( 48 ), SubResource( 49 ), SubResource( 51 ) ],
+"loop": false,
+"name": "walk_right",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 57 ), SubResource( 58 ), SubResource( 59 ), SubResource( 60 ), SubResource( 61 ), SubResource( 62 ), SubResource( 63 ) ],
+"loop": false,
+"name": "walk_up",
 "speed": 5.0
 } ]
+
+[sub_resource type="ConvexPolygonShape2D" id=73]
+points = PoolVector2Array( 24, 24, 0.046936, 24, 0.046936, 0, 24, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=74]
+points = PoolVector2Array( 24, 24, 0, 24, 0, 0, 24, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=75]
+points = PoolVector2Array( 24, 24, 0, 24, 0, 0, 24, 0 )
 
 [sub_resource type="TileSet" id=19]
 0/name = "avianarchy-concrete-wall-3.png 0"
@@ -240,9 +353,16 @@ animations = [ {
 0/navigation_offset = Vector2( 0, 0 )
 0/shape_offset = Vector2( 0, 0 )
 0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 73 )
 0/shape_one_way = false
-0/shape_one_way_margin = 0.0
-0/shapes = [  ]
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 73 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 0/z_index = 0
 1/name = "avianarchy-concrete-wall-2.png 1"
 1/texture = ExtResource( 10 )
@@ -254,9 +374,16 @@ animations = [ {
 1/navigation_offset = Vector2( 0, 0 )
 1/shape_offset = Vector2( 0, 0 )
 1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 74 )
 1/shape_one_way = false
-1/shape_one_way_margin = 0.0
-1/shapes = [  ]
+1/shape_one_way_margin = 1.0
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 74 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 1/z_index = 0
 2/name = "avianarchy-concrete-wall-1.png 2"
 2/texture = ExtResource( 9 )
@@ -268,9 +395,16 @@ animations = [ {
 2/navigation_offset = Vector2( 0, 0 )
 2/shape_offset = Vector2( 0, 0 )
 2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape = SubResource( 75 )
 2/shape_one_way = false
-2/shape_one_way_margin = 0.0
-2/shapes = [  ]
+2/shape_one_way_margin = 1.0
+2/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 75 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 2/z_index = 0
 
 [node name="Game" type="Node"]
@@ -295,7 +429,7 @@ shape = SubResource( 15 )
 position = Vector2( -2.66667, 5.33333 )
 scale = Vector2( 2.66667, 2.66667 )
 frames = SubResource( 14 )
-animation = "idle"
+animation = "idle_up"
 speed_scale = 2.0
 
 [node name="Camera2D" type="Camera2D" parent="player"]
@@ -303,16 +437,18 @@ current = true
 zoom = Vector2( 0.4, 0.4 )
 
 [node name="RayCast2D" type="RayCast2D" parent="player"]
-position = Vector2( -2.66667, 5.33334 )
+position = Vector2( -2.5, 5.5 )
 enabled = true
-cast_to = Vector2( 0, -96 )
+cast_to = Vector2( 0, 92 )
+collide_with_areas = true
 
-[node name="Wall" parent="." instance=ExtResource( 3 )]
-position = Vector2( 0, -24 )
+[node name="Tween" type="Tween" parent="player"]
 
-[node name="TileMap" type="TileMap" parent="."]
+[node name="TileMap_wall" type="TileMap" parent="."]
+position = Vector2( 0, -1.62125e-05 )
 tile_set = SubResource( 19 )
 cell_size = Vector2( 24, 24 )
+show_collision = true
 format = 1
 tile_data = PoolIntArray( -131078, 2, 0, -131077, 1, 0, -131076, 0, 0, -131075, 1, 0, -131074, 2, 0, -131073, 2, 0, -196608, 2, 0, -196607, 2, 0, -196606, 1, 0, -196605, 2, 0, -196604, 2, 0, -65542, 2, 0, -131068, 2, 0, -6, 2, 0, -3, 2, 0, -2, 2, 0, -1, 1, 0, -65536, 1, 0, -65535, 1, 0, -65534, 2, 0, -65533, 2, 0, -65532, 2, 0, 65530, 2, 0, 2, 2, 0, 3, 0, 0, 4, 2, 0, 131066, 1, 0, 65538, 2, 0, 65539, 1, 0, 65540, 2, 0, 196602, 1, 0, 131074, 2, 0, 131075, 2, 0, 131076, 2, 0, 262138, 2, 0, 196609, 2, 0, 196610, 1, 0, 196611, 1, 0, 196612, 2, 0, 327674, 1, 0, 327677, 2, 0, 327678, 1, 0, 327679, 2, 0, 262144, 2, 0, 262145, 2, 0, 262146, 2, 0, 262147, 2, 0, 262148, 2, 0, 393210, 2, 0, 393211, 0, 0, 393212, 2, 0, 393213, 2, 0, 393214, 2, 0, 393215, 1, 0, 327680, 2, 0, 327681, 2, 0, 327682, 1, 0, 327683, 2, 0, 327684, 2, 0, 393219, 2, 0, 393220, 2, 0, 458756, 2, 0 )
 
