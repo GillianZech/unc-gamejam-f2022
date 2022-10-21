@@ -45,8 +45,9 @@ func move(dir):
 		Tween.EASE_IN_OUT
 	)
 	if !ray.is_colliding():
-		position += vector_pos
 		$Tween.start()
+		position += vector_pos
+		
 		
 	
 
