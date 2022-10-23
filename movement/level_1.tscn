@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://textures/avianarchy-floor-brick-3.png" type="Texture" id=2]
@@ -8,8 +8,7 @@
 [ext_resource path="res://textures/avianarchy-concrete-wall-1.png" type="Texture" id=6]
 [ext_resource path="res://textures/avianarchy-floor-tile-1.png" type="Texture" id=7]
 [ext_resource path="res://textures/avianarchy-concrete-wall-2.png" type="Texture" id=8]
-[ext_resource path="res://Bird Cage Sprite Sheets Total.png" type="Texture" id=9]
-[ext_resource path="res://movement/cage.gd" type="Script" id=10]
+[ext_resource path="res://cage.tscn" type="PackedScene" id=9]
 
 [sub_resource type="TileSet" id=20]
 0/name = "avianarchy-floor-tile-1.png 0"
@@ -235,33 +234,6 @@ points = PoolVector2Array( 24, 24, 0, 24, 0, 0, 24, 0 )
 } ]
 2/z_index = 0
 
-[sub_resource type="RectangleShape2D" id=76]
-extents = Vector2( 34.7569, 34.8433 )
-
-[sub_resource type="AtlasTexture" id=77]
-atlas = ExtResource( 9 )
-region = Rect2( 0, 168, 24, 24 )
-
-[sub_resource type="AtlasTexture" id=78]
-atlas = ExtResource( 9 )
-region = Rect2( 24, 168, 24, 24 )
-
-[sub_resource type="AtlasTexture" id=79]
-atlas = ExtResource( 9 )
-region = Rect2( 48, 168, 24, 24 )
-
-[sub_resource type="AtlasTexture" id=80]
-atlas = ExtResource( 9 )
-region = Rect2( 72, 168, 24, 24 )
-
-[sub_resource type="SpriteFrames" id=81]
-animations = [ {
-"frames": [ SubResource( 77 ), SubResource( 78 ), SubResource( 79 ), SubResource( 80 ) ],
-"loop": true,
-"name": "lears-macaw",
-"speed": 5.0
-} ]
-
 [node name="Game" type="Node"]
 
 [node name="floor" type="TileMap" parent="."]
@@ -288,15 +260,6 @@ show_collision = true
 format = 1
 tile_data = PoolIntArray( -131078, 2, 0, -131077, 2, 0, -131076, 1, 0, -131075, 2, 0, -131074, 1, 0, -131073, 1, 0, -196608, 2, 0, -196607, 2, 0, -196606, 1, 0, -196605, 1, 0, -196604, 2, 0, -196603, 2, 0, -196602, 0, 0, -196601, 2, 0, -196600, 1, 0, -196599, 1, 0, -196598, 2, 0, -196597, 1, 0, -196596, 2, 0, -196595, 2, 0, -196594, 2, 0, -196593, 1, 0, -65542, 1, 0, -131057, 1, 0, -6, 1, 0, -65521, 1, 0, 65530, 0, 0, 15, 1, 0, 131066, 1, 0, 65551, 1, 0, 196602, 2, 0, 131087, 1, 0, 262138, 2, 0, 196623, 0, 0, 327674, 2, 0, 262159, 1, 0, 393210, 2, 0, 327695, 1, 0, 458746, 1, 0, 393231, 1, 0, 524282, 1, 0, 458767, 1, 0, 589818, 2, 0, 589819, 2, 0, 589820, 2, 0, 589821, 1, 0, 589822, 1, 0, 589823, 2, 0, 524288, 1, 0, 524289, 1, 0, 524290, 0, 0, 524291, 1, 0, 524292, 2, 0, 524293, 2, 0, 524294, 2, 0, 524295, 2, 0, 524296, 1, 0, 524297, 1, 0, 524298, 1, 0, 524299, 2, 0, 524300, 2, 0, 524301, 1, 0, 524302, 2, 0, 524303, 1, 0 )
 
-[node name="cage" type="Area2D" parent="."]
-position = Vector2( 336, 72 )
-script = ExtResource( 10 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="cage"]
-position = Vector2( 12.6302, 11.4819 )
-shape = SubResource( 76 )
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="cage"]
-frames = SubResource( 81 )
-animation = "lears-macaw"
-centered = false
+[node name="cage" parent="." instance=ExtResource( 9 )]
+collision_layer = 2
+collision_mask = 2

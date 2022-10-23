@@ -3,11 +3,13 @@ extends Area2D
 var occupied = false
 
 func on_cage_body_entered():
+	get_tree().change_scene("res://movement/level_2.tscn")
+	print("cage")
 	
 	
 	
 	
-func on_cage_body_exited():
+	
 	
 
 # Called when the node enters the scene tree for the first time.
